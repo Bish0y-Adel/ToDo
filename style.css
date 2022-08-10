@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background: rgb(171, 169, 169);
+}
+.container {
+  position: relative;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto;
+}
+.header {
+  color: blue;
+  position: relative;
+  padding: 10px;
+  border-style: solid;
+  border-color: rgb(40, 4, 27);
+  border-width: 10px;
+  margin: 50px;
+  border-radius: 5px;
+}
+.addTask {
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+}
+.addTask > input[type="text"] {
+  width: 90%;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #666;
+  background: none;
+  padding: 10px;
+  font-size: 22px;
+  outline: none;
+}
+.addTask button {
+  margin: 0 10px;
+  background: red;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.8s;
+}
+.addTask button:hover {
+  transform: scale(1.5);
+}
+.notCompleted,
+.Completed {
+  margin: 5px 0;
+  padding: 20px;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: blue;
+}
+ol {
+  list-style: none;
+  counter-reset: myCounter;
+}
+ol li {
+  width: 100%;
+  padding: 20px;
+  margin: 5px 0;
+  background: rgba(183, 48, 48, 0.609);
+  font-size: 22px;
+  counter-increment: myCounter;
+}
+ol.Completed li {
+  background: rgba(16, 215, 16, 0.689);
+}
+ol li::before {
+  content: counter(myCounter);
+  background: blue;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2rem;
+  text-align: center;
+  color: white;
+  margin-right: 0.5rem;
+}
+li button {
+  float: right;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 30px;
+  margin-right: 8px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.8s;
+}
+li button:hover {
+  transform: scale(1.5);
+}
